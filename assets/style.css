@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: antiquewhite;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  color: black;
+  text-shadow: 0.5px 0.5px white;
+  text-align: center;
+  font-size: large;
+  font-family: sans-serif;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+h1 {
+  font-size: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 25px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 25px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+.buttons{
+  display: inline-block;
+  background-color: grey;
+  border-radius: 10px;
+  border: 3px double #ffffff;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  padding: 20px;
+  width: 200px;
+  margin-top: 5px;
+}
+
+.buttons:hover{
+  background-color: lightpink;
+  box-shadow: 4px 3px 6px;
+}
+
+#startpage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#countdownTimer{
+  color: #000000;
+  font-size: x-large;
+  text-align: center;
+}
+
+#quiz{
+  display: none;
+}
+
+#answer{
+  display: none;
+}
+
+#gameOver{
+  text-align: center;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+#finalScorePoints{
+  padding-bottom: 10px;
+  font-size: large;
+  font-weight: bold;
+}
+
+#highScoreScreen{
+  height: 100%;
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#HighScore-titlePage{
+  display: none;
+  width: 50%;
+  padding-bottom: 10px;
+}
+
+#HS_initials{
+  display: inline-block;
+  padding-left: 20px;
+}
+
+#HS_Score{
+  padding-right: 20px;
+  float: right;
+}
+
+#gameEndOption{
+  display: none;
+}

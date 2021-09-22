@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Quiz Challenge</title>
+    <link rel="stylesheet" type="text/css" href="./assets/reset.css">
+    <link rel="stylesheet" type="text/css" href="./assets/style.css">
+</head>
+
+<body>
+
+    <section id="startpage">
+        <h1>Welcome to the code quiz Challenge</h1>
+        <h2>This quiz is to test your coding skills concepts</h2>
+        <p>Good luck</p>
+        <button class="buttons" id="startQuizBtn"> Start the coding Quiz.</button>
+        <button class="buttons" id="startpageHSBtn"> High Scores </button>
+    </section>
+
+    <section id="quiz">
+        <section id="countdownTimer"> Time Remaining: </section>
+        <section id="questions">
+            <h3> Questions to be asked</h3>
+        </section>
+
+        <button class = "buttons" id="a">A</button>
+        <button class = "buttons" id="b">B</button>
+        <button class = "buttons" id="c">C</button>
+        <button class = "buttons" id="d">D</button>
+
+        <section id="answer"></section>
+    </section>
+
+    <section id="gameOver">
+        <section id="finalScorePoints"></section>
+        <input type="text" size="40" placeholder="Enter your initials" name="intials" id="initials" />
+        <button id="submitScore">Submit Score Now</button>
+    </section>
+
+    <section id="highScoreScreen">
+        <section id="highScorePage">
+            <section id="HighScore-titlePage">
+                <h3>High Score: </h3>
+                <h3>Score: </h3>
+            </section>
+            <section id="HS_initials"></section>
+            <section id="HS_Score"> </section>
+        </section>
+
+
+        <section id="gameEndOption">
+            <button id="playAgainOpt"> Play Again? </button>
+            <button id="clearHSOpt"> Erase High Scores? </button>
+        </section>
+    </section>
+
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>
