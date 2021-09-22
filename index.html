@@ -16,7 +16,7 @@
         <h2>This quiz is to test your coding skills concepts</h2>
         <p>Good luck</p>
         <button class="buttons" id="startQuizBtn"> Start the coding Quiz.</button>
-        <button class="buttons" id="startpageHSBtn"> High Scores </button>
+        <button class="buttons" id="startpageHSBtn" onclick = "showHighScore()"> High Scores </button>
     </section>
 
     <section id="quiz">
@@ -25,10 +25,10 @@
             <h3> Questions to be asked</h3>
         </section>
 
-        <button class = "buttons" id="a">A</button>
-        <button class = "buttons" id="b">B</button>
-        <button class = "buttons" id="c">C</button>
-        <button class = "buttons" id="d">D</button>
+        <button class = "buttons" id="a" onclick="checkIfCorrect('a')">A</button>
+        <button class = "buttons" id="b" onclick="checkIfCorrect('b')">B</button>
+        <button class = "buttons" id="c" onclick="checkIfCorrect('c')">C</button>
+        <button class = "buttons" id="d" onclick="checkIfCorrect('d')">D</button>
 
         <section id="answer"></section>
     </section>
@@ -51,8 +51,8 @@
 
 
         <section id="gameEndOption">
-            <button id="playAgainOpt"> Play Again? </button>
-            <button id="clearHSOpt"> Erase High Scores? </button>
+            <button id="playAgainOpt" onclick="restartQuiz()"> Play Again? </button>
+            <button id="clearHSOpt" onclick = "clearScore()"> Erase High Scores? </button>
         </section>
     </section>
 
