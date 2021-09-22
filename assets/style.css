@@ -1,9 +1,11 @@
+/*Page layout by default*/
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
+/*Body layout/format*/
 body {
   font-family: sans-serif;
   background-color: antiquewhite;
@@ -14,6 +16,7 @@ body {
   align-items: center;
 }
 
+/*Any paragrapgh elements*/
 p {
   color: black;
   text-shadow: 0.5px 0.5px white;
@@ -24,6 +27,7 @@ p {
   padding-bottom: 5px;
 }
 
+/*Any h1 elements*/
 h1 {
   font-size: 30px;
   padding-top: 5px;
@@ -31,6 +35,7 @@ h1 {
   text-align: center;
 }
 
+/*Any h2 elements*/
 h2 {
   font-size: 25px;
   padding-top: 5px;
@@ -38,13 +43,15 @@ h2 {
   text-align: center;
 }
 
-h2 {
+/*Any h3 elements*/
+h3 {
   font-size: 25px;
   padding-top: 5px;
   padding-bottom: 5px;
   text-align: center;
 }
 
+/*Buttons class. Want all buttons to look alike*/
 .buttons{
   display: inline-block;
   background-color: grey;
@@ -58,31 +65,37 @@ h2 {
   margin-top: 5px;
 }
 
+/*Change buttons color when hovered over*/
 .buttons:hover{
   background-color: lightpink;
   box-shadow: 4px 3px 6px;
 }
 
+/*How I want the start page to look*/
 #startpage{
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/*How I want the countdown timer displayed*/
 #countdownTimer{
   color: #000000;
   font-size: x-large;
   text-align: center;
 }
 
+/*Initally hide the quiz body*/
 #quiz{
   display: none;
 }
 
+/*Initally hid the answer*/
 #answer{
   display: none;
 }
 
+/*How I want to see the screen after user finishes answering quiz questions. Initally displayed to hide*/
 #gameOver{
   text-align: center;
   display: none;
@@ -90,12 +103,14 @@ h2 {
   align-items: center;
 }
 
+/*How I want to let the user see there stats after finishing the quiz*/
 #finalScorePoints{
   padding-bottom: 10px;
   font-size: large;
   font-weight: bold;
 }
 
+/*How i want the overall final screen to look like*/
 #highScoreScreen{
   height: 100%;
   width: 100%;
@@ -105,22 +120,18 @@ h2 {
   justify-content: center;
 }
 
-#HighScore-titlePage{
+/*How i want to see the stats table to look like*/
+#highScorePage{
   display: none;
-  width: 50%;
-  padding-bottom: 10px;
+  width: 20%;
+  border: solid;
+  border-color: greenyellow;
+  border-bottom-style: groove;
+  padding-bottom: 20px;
 }
 
-#HS_initials{
-  display: inline-block;
-  padding-left: 20px;
-}
-
-#HS_Score{
-  padding-right: 20px;
-  float: right;
-}
-
+/*Format for the buttons to restart or clear table/localStorage*/
 #gameEndOption{
+  padding-top: 50px;
   display: none;
 }

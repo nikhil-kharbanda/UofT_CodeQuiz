@@ -5,26 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Quiz Challenge</title>
+    <!--Link the reset and style css stylesheets-->
     <link rel="stylesheet" type="text/css" href="./assets/reset.css">
     <link rel="stylesheet" type="text/css" href="./assets/style.css">
 </head>
 
 <body>
 
+    <!--Welcome screen-->
     <section id="startpage">
         <h1>Welcome to the code quiz Challenge</h1>
         <h2>This quiz is to test your coding skills concepts</h2>
         <p>Good luck</p>
+        <!--Buttons to move to the next screen-->
         <button class="buttons" id="startQuizBtn"> Start the coding Quiz.</button>
         <button class="buttons" id="startpageHSBtn" onclick = "showHighScore()"> High Scores </button>
     </section>
 
+    <!--Quis body section-->
     <section id="quiz">
+        <!--Display timer-->
         <section id="countdownTimer"> Time Remaining: </section>
+        <!--Display questions and button options(placeholder for js)-->
         <section id="questions">
             <h3> Questions to be asked</h3>
         </section>
-
         <button class = "buttons" id="a" onclick="checkIfCorrect('a')">A</button>
         <button class = "buttons" id="b" onclick="checkIfCorrect('b')">B</button>
         <button class = "buttons" id="c" onclick="checkIfCorrect('c')">C</button>
@@ -33,34 +38,30 @@
         <section id="answer"></section>
     </section>
 
+    <!--Game over section, after quiz is over. Allows user to enter their initals-->
     <section id="gameOver">
         <section id="finalScorePoints"></section>
         <input type="text" size="40" placeholder="Enter your initials" name="initials" id="initials" />
-        <button id="submitScore">Submit Score Now</button>
+        <button class = "buttons" id="submitScore">Submit Score Now</button>
     </section>
 
+    <!--High score section, user can see prev scores, clear the table, or restart-->
     <section id="highScoreScreen">
         <section id="highScorePage">
-            <section id="HighScore-titlePage">
-
-            </section>
             <section>
-                <h3>Name: </h3>
-                <h3>Score: </h3>
-                <ol id="HS_initials">
-                </ol>
+                <ul id="HS_initials"></ul>
 
                 <section id = "HS_Score"></section>
             </section>
         </section>
 
-
         <section id="gameEndOption">
-            <button id="playAgainOpt" onclick="restartQuiz()"> Play Again? </button>
-            <button id="clearHSOpt" onclick = "clearScore()"> Erase High Scores? </button>
+            <button class = "buttons" id="playAgainOpt" onclick="restartQuiz()"> Play Again? </button>
+            <button class = "buttons" id="clearHSOpt" onclick = "clearScore()"> Erase High Scores? </button>
         </section>
     </section>
 
+    <!--Link to the js file-->
     <script src="./assets/script.js"></script>
 </body>
 
