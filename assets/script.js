@@ -4,7 +4,7 @@ var startPageScreen = document.getElementById("startpage");
 var startQuizBtn = document.getElementById("startQuizBtn");
 
 /*Page 2 - Variables for the quiz section*/
-var quizBody = document.getElementById("quiz");
+var quizScreen = document.getElementById("quiz");
 var quizTimer = document.getElementById("countdownTimer");
 var questionsEl = document.getElementById("questions");
 var optA = document.getElementById("a");
@@ -51,15 +51,21 @@ var quizQuestions = [
 var finalQuestionIndex = quizQuestions.length;
 var currentQuestionIndex = 0;
 var timeLeft = 60;
-var score = 0;
-var correctPoints = 0;
 
+var correctPoints = 0;
+var score = 0;
+var savedHS = JSON.parse(localStorage.getItem("score")) || [];
+
+/*Function to be called as the start quiz button hit*/
 function startQuiz() {
+  /*Hide the other screens*/
   gameOverScreen.style.display = "none";
   startPageScreen.style.display = "none";
-  quizBody.style.display = "block";
+
+  /*Display a quiz question from array. Function called*/
   generateQuizQuestion();
 
+  /*Creating a timer*/
   timerInterval = setInterval(function () {
     timeLeft--;
     quizTimer.textContent = "Time Remaining: " + timeLeft;
@@ -69,8 +75,12 @@ function startQuiz() {
       showScore();
     }
   }, 1000);
+
+  /*Display the quiz screen*/
+  quizScreen.style.display = "block";
 }
 
+/*Generate a question from the quizQuestions array*/
 function generateQuizQuestion() {
   gameOverScreen.style.display = "none";
   if (currentQuestionIndex === finalQuestionIndex) {
@@ -85,33 +95,36 @@ function generateQuizQuestion() {
   optD.innerHTML = currentQuestion.choiceD;
 }
 
+/*Check to see if its the correct answer. Function can get called in the HTML side.*/
 function checkIfCorrect(answer) {
   correct = quizQuestions[currentQuestionIndex].correctAnswer;
   if (answer === correct && currentQuestionIndex !== finalQuestionIndex) {
     score++;
-    alert("Correct, congrats. You know your stuff!");
+    //alert("Correct, congrats. You know your stuff!");
     currentQuestionIndex++;
     generateQuizQuestion();
-  } else if (answer !== answer && currentQuestionIndex !== finalQuestionIndex) {
-    quizTimer = quizTimer - 5;
-    alert("That is incorrect. 10 secs has been deducted");
+  } else if (answer !== correct && currentQuestionIndex !== finalQuestionIndex) {
+    //alert("That is incorrect. 10 secs has been deducted");
+    quizTimer.textContent = "Time Remaining: " + timeLeft;
     currentQuestionIndex++;
-    generateQuizQuestion;
+    timeLeft = timeLeft - 10;
+    generateQuizQuestion();
   } else {
     showScore();
   }
 }
 
+/*Only occurs when the submit score button is pressed*/ 
 submitScoreBtn.addEventListener("click", function highScore() {
   if (highScoreInitalsInput.value === "") {
     alert("Please enter a valid inital");
     return false;
   } else {
-    var savedHS = [];
+    //High score page section
     var currentUser = highScoreInitalsInput.value.trim();
     var currentHighScore = {
       name: currentUser,
-      score: score,
+      score: timeLeft,
     };
 
     gameOverScreen.style.display = "none";
@@ -120,17 +133,20 @@ submitScoreBtn.addEventListener("click", function highScore() {
     endGameButtons.style.display = "flex";
 
     savedHS.push(currentHighScore);
+    localStorage.setItem("score", JSON.stringify(savedHS));
     generateHighScore();
   }
 });
 
 function showScore() {
-  quizBody.style.display = "none";
+  clearInterval(timerInterval);
+  quizScreen.style.display = "none";
   gameOverScreen.style.display = "flex";
+
   clearInterval(quizTimer);
   highScoreInitalsInput.value = "";
   finalScoreEl.innerHTML =
-    "You got " + score + " out of " + quizQuestions.length + " correct!";
+    "You got " + timeLeft + " out of " + quizQuestions.length + " correct!";
 }
 
 function showHighScore() {
@@ -147,13 +163,13 @@ function generateHighScore() {
   HSDisplayInitals.innerHTML = "";
   HSDisplayHS.innerHTML = "";
   var listHighScores = [];
-  for (i = 0; i < listHighScores.length; i++) {
+  for (i = 0; i < savedHS.length; i++) {
     var newName = document.createElement("li");
-    var newScore = document.createElement("li");
-    newName.textContent = listHighScores[i].name;
-    newScore.textContent = listHighScores[i].score;
+    // var newScore = document.createElement("li");
+    newName.textContent = savedHS[i].name + ": " + savedHS[i].score;
+    // newScore.textContent = savedHS[i].score;
     HSDisplayInitals.appendChild(newName);
-    HSDisplayHS.appendChild(newScore);
+    //HSDisplayHS.appendChild(newScore);
   }
 }
 
@@ -163,9 +179,9 @@ function clearScore() {
 }
 
 function restartQuiz() {
-  startPageScreen.style.display = "flex";
-  gameOverScreen.style.display = "none";
   highScoreScreen.style.display = "none";
+  gameOverScreen.style.display = "none";
+  startPageScreen.style.display = "flex";
   timeLeft = 60;
   score = 0;
   currentQuestionIndex = 0;
