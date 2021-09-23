@@ -11,9 +11,9 @@ Checklist:\
 [X] When the user clicks the start button, a timer start as well as a series of questions appear\
 [X] Once user answers a question, the next question appears\
 [X] When a user answers a question incorrectly, time is subtracted\
-[X] When timer reaches 0, or all questions have been answered, the user can save their score as well as enter their initals\
+[X] When timer reaches 0, or all questions have been answered, the user can save their score as well as enter their initals
 
-Bonus: Since I have a lot of questions, I wanted to give the user a bonus 5 secs/correct answer\
+Bonus: Since I have a lot of questions, I wanted to give the user a bonus 5 secs/correct answer
 
 ![The welcome screen](imgs/Page1-Welcome.PNG)
 This screenshot is the first screen the user is greeted by.
@@ -24,5 +24,5 @@ This screenshot is a sample question the webpage can ask.
 ![Screen after quiz](imgs/Page4-End_of_quiz_screen.PNG)
 This screenshot is when after the quiz is over, the user can see how they did and save their score
 
-![Sample table of scores](Page5-Table_of_scoresPNG)
+![Sample table of scores](Page5-Table_of_scoresPNG) \
 This screenshot is a sample of a table of records 
