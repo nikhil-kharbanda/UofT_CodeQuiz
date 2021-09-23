@@ -1,7 +1,7 @@
 Name: Nikhil Kharbanda\
 Project: Code Generator\
 URL to project: https://nikhil-kharbanda.github.io/UofT_CodeQuiz/ \
-Due: September 22, 2021 \
+Due: September 22, 2021 
 
 In this assignment, we were tasked to make a "Code Quiz" application from scratch. The goal of this assignment was to get a better understanding of javascript and how it can work with the HTML/CSS side of things
 
@@ -16,4 +16,13 @@ Checklist:\
 Bonus: Since I have a lot of questions, I wanted to give the user a bonus 5 secs/correct answer
 
 ![The welcome screen](imgs/Page1-Welcome.PNG)
-This screenshot is the first first the user is greeted by.
+This screenshot is the first screen the user is greeted by.
+
+![Sample Question](imgs/Page2-Question.PNG)
+This screenshot is a sample question the webpage can ask.
+
+![Screen after quiz](imgs/Page4-End_of_quiz_screen.PNG)
+This screenshot is when after the quiz is over, the user can see how they did and save their score
+
+![Sample table of scores](Page5-Table_of_scoresPNG.PNG)
+This screenshot is a sample of a table of records 
