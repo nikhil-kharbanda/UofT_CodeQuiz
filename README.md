@@ -15,14 +15,14 @@ Checklist:\
 
 Bonus: Since I have a lot of questions, I wanted to give the user a bonus 5 secs/correct answer
 
-![The welcome screen](imgs/Page1-Welcome.PNG)
+![The welcome screen](imgs/Page1-Welcome.PNG)  
 This screenshot is the first screen the user is greeted by.
 
-![Sample Question](imgs/Page2-Question.PNG)
+![Sample Question](imgs/Page2-Question.PNG)  
 This screenshot is a sample question the webpage can ask.
 
-![Screen after quiz](imgs/Page4-End_of_quiz_screen.PNG)
+![Screen after quiz](imgs/Page4-End_of_quiz_screen.PNG)  
 This screenshot is when after the quiz is over, the user can see how they did and save their score
 
-![Sample table of scores](imgs/Page5-Table_of_scoresPNG.PNG) 
+![Sample table of scores](imgs/Page5-Table_of_scoresPNG.PNG)   
 This screenshot is a sample of a table of records 
