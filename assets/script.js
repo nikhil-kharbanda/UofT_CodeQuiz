@@ -215,7 +215,7 @@ function checkIfCorrect(answer) {
   correct = quizQuestions[currentQuestionIndex].correctAnswer;
   /*If user correctly answered question, and its not the last question. Increment correntPoints, alert the user their status, increment question counter, and prepare to re-write elements*/
   if (answer === correct && currentQuestionIndex !== finalQuestionIndex) {
-    timeLeft = timeLeft + 10;
+    timeLeft = timeLeft + 5;
     correctPoints++;
     alert("Correct, congrats. You know your stuff!");
     currentQuestionIndex++;
