@@ -24,5 +24,5 @@ This screenshot is a sample question the webpage can ask.
 ![Screen after quiz](imgs/Page4-End_of_quiz_screen.PNG)
 This screenshot is when after the quiz is over, the user can see how they did and save their score
 
-![Sample table of scores](imgs/Page5-Table_of_scores.PNG) \
+![Sample table of scores](imgs/Page5-Table_of_scoresPNG) \
 This screenshot is a sample of a table of records 
