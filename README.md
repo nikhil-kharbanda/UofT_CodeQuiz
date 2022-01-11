@@ -27,10 +27,6 @@ The user starts the quiz by clicking a button, a series of questions and options
 ### Install Dependencies
 Once cloned, and to run this application locally, right click on the "index.html" file and select "Open in new browser"
 
-### Features
-1. Users can look for a stock value and get real time updates
-2. Users can look for a cryptocurrency value and see the different trends
-
 ## Contributing
   N/A
 
